@@ -1,7 +1,8 @@
 **` NotePadXX `**<br>
 **` Text Editor `**<br>
-**`Download the exe file and use it`** <a href="https://github.com/raghul-tech/TextEditor-app/tree/master/NotePadXX%20exe%20file">DOWNLOAD</a><br>
+**`Download the exe file and use it`**<br>
 **`Required java latest version`**<br>
+ <a href="https://github.com/raghul-tech/TextEditor-app/tree/master/NotePadXX%20exe%20file">DOWNLOAD!</a>
 <h1 align="center">
 <br>
 <a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/Emptyfile.png" alt="NotePad"></a>
