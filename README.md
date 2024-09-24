@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # NotepadXX
 
@@ -92,3 +93,35 @@ This project is licensed under the MIT License.
 
 ## Contact
 Developed by [Raghul John R](https://www.linkedin.com/in/raghul-john-r-3a9577320).
+=======
+**` NotePadXX `**<br>
+**` Text Editor `**<br>
+**`Download the exe file and use it`**<br>
+**`Required java latest version`**<br>
+ <a href="https://github.com/raghul-tech/TextEditor-app/tree/master/NotePadXX%20exe%20file">DOWNLOAD!</a>
+<h1 align="center">
+<br>
+<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/Emptyfile.png" alt="NotePad"></a>
+</h1>
+<br>
+<h1 align="center">
+<br>
+<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/Files.png" alt="NotePad"></a>
+</h1>
+<br>
+<h1 align="center">
+<br>
+<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/Folder.png" alt="NotePad"></a>
+</h1>
+<br>
+<h1 align="center">
+<br>
+<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/newfile.png" alt="NotePad"></a>
+</h1>
+<br>
+<h1 align="center">
+<br>
+<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/TextEditor.png" alt="NotePad"></a>
+</h1>
+<br>
+>>>>>>> b18fab05c95b4036578df0f9fa1779f7254077ac
