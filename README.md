@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # NotepadXX
 
@@ -15,31 +14,31 @@ NotepadXX is a lightweight and user-friendly text editor application developed i
 # NotepadXX
 
 <p align="center">
-  <a href="https://github.com/raghul-tech/NotePad-app.git">
+  <a href="https://github.com/raghul-tech/TextEditor-app.git">
     <img src="img/Emptyfile.png" alt="Empty File View">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/raghul-tech/NotePad-app.git">
+  <a href="https://github.com/raghul-tech/TextEditor-app.git">
     <img src="img/Files.png" alt="Files View">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/raghul-tech/NotePad-app.git">
+  <a href="https://github.com/raghul-tech/TextEditor-app.git">
     <img src="img/Folder.png" alt="Folder View">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/raghul-tech/NotePad-app.git">
+  <a href="https://github.com/raghul-tech/TextEditor-app.git">
     <img src="img/newfile.png" alt="New File View">
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/raghul-tech/NotePad-app.git">
+  <a href="https://github.com/raghul-tech/TextEditor-app.git">
     <img src="img/TextEditor.png" alt="Text Editor View">
   </a>
 </p>
@@ -62,8 +61,8 @@ To run NotepadXX, ensure you have:
    ```
 3. Compile and run the project:
    ```bash
-   javac FileBrowser.java
-   java FileBrowser
+   javac Main.java
+   java Main
    ```
 ## Download and Install
 
@@ -89,39 +88,7 @@ You can download the executable file for **NotepadXX** directly from the [releas
 Contributions are welcome! If you'd like to contribute to NotepadXX, please fork the repository and submit a pull request.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the  GNU General Public License (GPL v3).
 
 ## Contact
 Developed by [Raghul John R](https://www.linkedin.com/in/raghul-john-r-3a9577320).
-=======
-**` NotePadXX `**<br>
-**` Text Editor `**<br>
-**`Download the exe file and use it`**<br>
-**`Required java latest version`**<br>
- <a href="https://github.com/raghul-tech/TextEditor-app/tree/master/NotePadXX%20exe%20file">DOWNLOAD!</a>
-<h1 align="center">
-<br>
-<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/Emptyfile.png" alt="NotePad"></a>
-</h1>
-<br>
-<h1 align="center">
-<br>
-<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/Files.png" alt="NotePad"></a>
-</h1>
-<br>
-<h1 align="center">
-<br>
-<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/Folder.png" alt="NotePad"></a>
-</h1>
-<br>
-<h1 align="center">
-<br>
-<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/newfile.png" alt="NotePad"></a>
-</h1>
-<br>
-<h1 align="center">
-<br>
-<a href="https://github.com/raghul-tech/NotePad-app.git"><img src="img/TextEditor.png" alt="NotePad"></a>
-</h1>
-<br>
->>>>>>> b18fab05c95b4036578df0f9fa1779f7254077ac
