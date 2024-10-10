@@ -1,5 +1,5 @@
 {
-    "latest_version": "1.2",
-    "download_url": "https://github.com/raghul-tech/NotepadXX/raw/refs/heads/master/releases/NotePadXX.exe",
+    "latest_version": "1.2.0",
+    "download_url": "https://github.com/raghul-tech/NotepadXX/raw/refs/heads/master/releases/NotepadXX-setup.exe",
     "changelog": "Added new features, fixed bugs."
 }
