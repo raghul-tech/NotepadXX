@@ -31,4 +31,4 @@ We may update this privacy policy from time to time to reflect changes in our pr
 
 ## Contact Us
 If you have any questions or concerns regarding this privacy policy or your use of NotepadXX, please contact us at:  
-**Email:** raghuljohn43@gmail.com
+**Email:** raghultechdev@gmail.com
