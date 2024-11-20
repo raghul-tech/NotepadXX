@@ -21,7 +21,7 @@ All notable changes to this project will be documented in this file. The format 
 - **Reopen Previous Tabs**: The app now remembers which files were open when closed, and will automatically reopen them upon restarting.
 
 ### Assets
-- [Releases](https://github.com/raghul-tech/NotepadXX/releases/download/v1.1.0)
+- [Releases](https://github.com/raghul-tech/NotepadXX/releases)
 
 ### Fixed
 - Fixed minor bugs related to the save and load file operations.

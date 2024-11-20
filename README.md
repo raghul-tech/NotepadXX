@@ -49,18 +49,21 @@ NotepadXX is a lightweight and user-friendly text editor application developed i
 ## Screenshots
 ### White Themes
 
+#### Light
 <p align="center">
   <a href="https://github.com/raghul-tech/NotepadXX.git">
     <img src="img/light.png" alt="light">
   </a>
 </p>
 
+#### Classic
 <p align="center">
   <a href="https://github.com/raghul-tech/NotepadXX.git">
     <img src="img/classic.png" alt="classic">
   </a>
 </p>
 
+#### macosLight
 <p align="center">
   <a href="https://github.com/raghul-tech/NotepadXX.git">
     <img src="img/macoslight.png" alt="macoslight">
@@ -69,18 +72,21 @@ NotepadXX is a lightweight and user-friendly text editor application developed i
 
 ### Dark Themes
 
+#### Dark
 <p align="center">
   <a href="https://github.com/raghul-tech/NotepadXX.git">
     <img src="img/dark.png" alt="dark">
   </a>
 </p>
 
+#### Dracula
 <p align="center">
   <a href="https://github.com/raghul-tech/NotepadXX.git">
-    <img src="img/darcula.png" alt="darcula">
+    <img src="img/dracula.png" alt="darcula">
   </a>
 </p>
 
+#### macosDark
 <p align="center">
   <a href="https://github.com/raghul-tech/NotepadXX.git">
     <img src="img/macosdark.png" alt="macosdark">
