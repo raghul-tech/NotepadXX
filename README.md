@@ -204,7 +204,7 @@ Choose NotepadXX today and discover how it can elevate your text editing experie
    * Star this project on GitHub
    * Leave me a review [here](https://apps.microsoft.com/store/detail/9PL8NMXDXD40?cid=DevShareMCLPCS)
    * [![Buy Me a Coffee](https://img.shields.io/badge/Support-Donate-yellow.svg)](https://buymeacoffee.com/raghultech)
-   *  If you’re interested in contributing, please [contact me](raghultech.app@gmail.com) or submit an issue.	
+   *  If you’re interested in contributing, please [contact me](mailto:raghultech.app@gmail.com) or submit an issue.	
 
 ## Report a Bug
    * If you've encountered a bug, please report it by clicking the link below. 
