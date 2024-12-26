@@ -267,8 +267,6 @@ NotepadXX isn’t just another text editor; it’s a comprehensive, feature-pack
 
 Choose NotepadXX today and discover how it can elevate your text editing experience. **Download Now** and see the difference it makes in your workflow!
 
-[Download Now from Microsoft Store](https://apps.microsoft.com/store/detail/9PL8NMXDXD40?cid=DevShareMCLPCS)
-
 ## Contributing
 
 * If you like my work, please consider:
