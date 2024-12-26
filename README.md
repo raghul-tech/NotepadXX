@@ -15,11 +15,21 @@
     <img src="https://img.shields.io/github/release/raghul-tech/NotepadXX.svg?label=latest%20version&style=flat-square" alt="Releases" />
   </a>
   <a style="text-decoration:none">
-    <img src="https://img.shields.io/badge/platform-Windows%20%7C%20UWP-yellow.svg?style=flat-square" alt="Platform" />
+    <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-yellow.svg?style=flat-square" alt="Platform" />
   </a>
-  <a style="text-decoration:none" href="https://discord.gg/S9pCp6uu">
+  <a style="text-decoration:none" href="https://discord.gg/MQn4GT8CVp">
     <img src="https://img.shields.io/discord/your-discord-server-id.svg?style=flat-square" alt="Discord" />
   </a>
+</p>
+
+<p align="center">
+  <a style="text-decoration:none" href="https://raghul-tech.itch.io/notepadxx">
+    <img src="https://img.shields.io/badge/itch.io-Download-blueviolet.svg?style=flat-square" alt="itch.io" />
+  </a>
+  <a style="text-decoration:none" href="https://sourceforge.net/projects/notepadxx/">
+    <img src="https://img.shields.io/badge/SourceForge-Download-brightgreen.svg?style=flat-square" alt="SourceForge" />
+  </a>
+  
 </p>
 
 <p align="center">
@@ -142,17 +152,78 @@ NotepadXX is a lightweight and user-friendly text editor application developed i
 ### Prerequisites
 
 ### Installation
-NotepadXX is **bundled** as a self-contained application. You can directly download it from the Microsoft Store.
 
-## Download Now:
-NotepadXX is available in the Microsoft Store. You can get the latest version of 
-NotepadXX here for free:
-[NotepadXX on Microsoft Store](https://apps.microsoft.com/store/detail/9PL8NMXDXD40?cid=DevShareMCLPCS)
+### From Microsoft Store
+1. Visit the [Microsoft Store](https://apps.microsoft.com/detail/9pl8nmxdxd40?hl=en-in&gl=IN).
+2. Click "Install" to download and use the application.
 
- You can also use the Windows Package Manager to install NotepadXX:
- ```cmd
- winget install "NotepadXX"
- ```
+    <a href="https://apps.microsoft.com/detail/9pl8nmxdxd40?mode=direct">
+	<img src="img/microsoft.png" width="80" alt="Download NotepadXX from Microsoft Store"/>
+</a>
+
+### From itch.io
+1. Go to [itch.io](https://raghul-tech.itch.io/notepadxx).
+2. Download the application and follow the setup instructions.
+
+    <a href="https://raghul-tech.itch.io/notepadxx" target="_blank" rel="noopener noreferrer">
+      <img src="img/itchi.png" alt="Download NotepadXX from itch.io" width="150"/>
+    </a>
+
+### From SourceForge
+1. Navigate to [SourceForge](https://sourceforge.net/projects/notepadxx/).
+2. Download the installer compatible with your operating system.
+
+<a href="https://sourceforge.net/p/notepadxx/"><img alt="Download NotepadXX" src="https://sourceforge.net/sflogo.php?type=18&amp;group_id=3828162" width=200></a>
+
+[![Download NotepadXX](https://img.shields.io/sourceforge/dt/notepadxx.svg)](https://sourceforge.net/projects/notepadxx/files/latest/download)
+
+NotepadXX is available for **Windows** and **Linux**.
+
+# How to Download and Install
+
+## For Windows
+1. **From Microsoft Store**  
+   - Download the installer from the [Microsoft Store](https://apps.microsoft.com/detail/9pl8nmxdxd40?hl=en-in&gl=IN).  
+   - Run the installer, and it will redirect you to the Microsoft Store to complete the installation.
+
+2. **Using Winget**  
+   - Open Command Prompt or PowerShell.  
+   - Run the following command to install NotepadXX:  
+     ```bash
+     winget install "NotepadXX"
+     ```
+
+---
+
+## For Linux
+1. **Download the `.tar.gz` File**  
+   - Visit [SourceForge](https://sourceforge.net/projects/notepadxx/) or [itch.io](https://raghul-tech.itch.io/notepadxx) and download the Linux version of the `.tar.gz` file:  
+     **NotepadXXV1.1.0-Installer(Linux).tar.gz**
+
+2. **Extract the File**  
+   - Open a terminal and navigate to the directory where the `.tar.gz` file was downloaded.
+   - Use the following command to extract the file:  
+     ```bash
+     tar -xvzf "NotepadXXV1.1.0-Installer(Linux).tar.gz"
+     ```
+
+3. **Make the Installer Executable**  
+   - Navigate to the extracted folder:  
+     ```bash
+     cd "NotepadXXV1.1.0-Installer(Linux)"
+     ```
+   - Run the following command to make the `install.sh` script executable:  
+     ```bash
+     chmod +x install.sh
+     ```
+
+4. **Run the Installer**  
+   - Execute the installer with this command:  
+     ```bash
+     ./install.sh
+     ```
+   - This will create shortcuts in your desktop and menubar for easy access.
+
 ## Changelog:
 
 * View all official releases and downloads on the [NotepadXX Releases Page.](https://github.com/raghul-tech/NotepadXX/releases)
@@ -204,7 +275,7 @@ Choose NotepadXX today and discover how it can elevate your text editing experie
    * Star this project on GitHub
    * Leave me a review [here](https://apps.microsoft.com/store/detail/9PL8NMXDXD40?cid=DevShareMCLPCS)
    * [![Buy Me a Coffee](https://img.shields.io/badge/Support-Donate-yellow.svg)](https://buymeacoffee.com/raghultech)
-   *  If you’re interested in contributing, please [contact me](raghultech.app@gmail.com) or submit an issue.	
+   *  If you’re interested in contributing, please [contact me](mailto:raghultech.app@gmail.com) or submit an issue.	
 
 ## Report a Bug
    * If you've encountered a bug, please report it by clicking the link below. 
@@ -218,5 +289,5 @@ This project is licensed under the GNU General Public License (GPL v3).
 Email: [raghultech.app@gmail.com](mailto:raghultech.app@gmail.com)
 
 ## Stay tuned 📢:
-* [NotepadXX Discord Server](https://discord.gg/S9pCp6uu)
+* [NotepadXX Discord Server](https://discord.gg/MQn4GT8CVp)
 
