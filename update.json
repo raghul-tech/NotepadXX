@@ -1,6 +1,6 @@
 {
-    "latest_version": "1.1.0",
-    "download_url": "https://github.com/raghul-tech/NotepadXX/releases/download/v1.1.0/NotepadXX.Installer.exe",
-    "changelog": "First official release of NotepadXX"
+    "latest_version": "1.2.0",
+    "download_url": "https://github.com/raghul-tech/NotepadXX-Releases/raw/refs/heads/main/Downloads/NotepadXXV1.2.0/NotepadXX%20Installer%20V1.2.0.exe",
+    "changelog": "NotepadXX v1.2.0 adds real-time code linting, splash screen, Markdown preview, improved UI, Firefox support, and a new Preferences menu with theme, tooltip, and wrap line settings."
 }
 
