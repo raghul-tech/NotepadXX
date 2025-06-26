@@ -32,12 +32,12 @@ import javax.swing.WindowConstants;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 
 //@SuppressWarnings("static-access")
 public class WindowsUtils {
-	    private static final String UPDATE_URL = "https://raw.githubusercontent.com/raghul-tech/NotepadXX-Releases/refs/heads/main/updates/updateforWindowsV1.2.0.json";
-	    private static String currentVersion = "1.2.0";
+	    private static final String UPDATE_URL = "https://raw.githubusercontent.com/raghul-tech/NotepadXX-Releases/refs/heads/main/updates/updateforWindowsV1.2.1.json";
+	    private static String currentVersion = "1.2.1";
 	    private static long lastUpdateCheck = 0;
 	    private static ScheduledExecutorService executorService;
 	    private static boolean isCheckingForUpdate = false;
@@ -53,7 +53,7 @@ public class WindowsUtils {
 		      }
 		      Desktop.getDesktop().open(directory);  // Opens File Explorer
 		  } catch (IOException e) {
-		      JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error opening folder in Explorer: " + e.getMessage());
+		      JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error opening folder in Explorer: " + e.getMessage());
 		  }
 		}
 	
@@ -76,7 +76,7 @@ public class WindowsUtils {
 		      ProcessBuilder processBuilder = new ProcessBuilder(command);
 		      processBuilder.start();
 		  } catch (IOException e) {
-		      JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error opening folder in CMD: " + e.getMessage());
+		      JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error opening folder in CMD: " + e.getMessage());
 		  }
 		}
 	
@@ -108,7 +108,7 @@ public class WindowsUtils {
 	      vbsScript.deleteOnExit();
 
 	  } catch (IOException e) {
-	      JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error opening folder in Adminstrator CMD: " + e.getMessage());
+	      JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error opening folder in Adminstrator CMD: " + e.getMessage());
 	  }
 	}
 	
@@ -118,10 +118,10 @@ public class WindowsUtils {
 	        try {
 	            Desktop.getDesktop().browse(new URI(gitHubIssuesUrl));
 	        } catch (IOException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open the browser."+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open the browser."+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 	       //     e.printStackTrace(); // Print the stack trace for debugging
 	        } catch (URISyntaxException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Invalid URL format.", "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Invalid URL format.", "Error", JOptionPane.ERROR_MESSAGE);
 	        //    e.printStackTrace(); // Print the stack trace for debugging
 	        }
 	    }
@@ -131,10 +131,10 @@ public class WindowsUtils {
 	        try {
 	            Desktop.getDesktop().browse(new URI(gitHubIssuesUrl));
 	        } catch (IOException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open the browser."+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open the browser."+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 	       //     e.printStackTrace(); // Print the stack trace for debugging
 	        } catch (URISyntaxException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Invalid URL format.", "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Invalid URL format.", "Error", JOptionPane.ERROR_MESSAGE);
 	        //    e.printStackTrace(); // Print the stack trace for debugging
 	        }
 	    }
@@ -144,10 +144,10 @@ public class WindowsUtils {
 	        try {
 	            Desktop.getDesktop().browse(new URI(gitHubIssuesUrl));
 	        } catch (IOException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open the browser."+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open the browser."+e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 	       //     e.printStackTrace(); // Print the stack trace for debugging
 	        } catch (URISyntaxException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Invalid URL format.", "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Invalid URL format.", "Error", JOptionPane.ERROR_MESSAGE);
 	        //    e.printStackTrace(); // Print the stack trace for debugging
 	        }
 	    }
@@ -160,7 +160,7 @@ public class WindowsUtils {
 
 	            // Check if Desktop is supported (optional)
 	            if (!Desktop.isDesktopSupported()) {
-	                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Microsoft Edge is not supported on your system.", "Error", JOptionPane.ERROR_MESSAGE);
+	                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Microsoft Edge is not supported on your system.", "Error", JOptionPane.ERROR_MESSAGE);
 	                return;
 	            }
 
@@ -181,7 +181,7 @@ public class WindowsUtils {
 	            processBuilder.start();
 
 	        } catch (IOException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error opening the file in Microsoft Edge.", "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error opening the file in Microsoft Edge.", "Error", JOptionPane.ERROR_MESSAGE);
 	           // e.printStackTrace(); // Print the stack trace for debugging
 	        }
 	    }
@@ -193,7 +193,7 @@ public class WindowsUtils {
 
 	            // Check if Desktop is supported (optional)
 	            if (!Desktop.isDesktopSupported()) {
-	                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Google Chrome is not supported on your system.", "Error", JOptionPane.ERROR_MESSAGE);
+	                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Google Chrome is not supported on your system.", "Error", JOptionPane.ERROR_MESSAGE);
 	                return;
 	            }
 
@@ -216,7 +216,7 @@ public class WindowsUtils {
 	            processBuilder.start();
 
 	        } catch (IOException e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error opening the file in Google Chrome.", "Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error opening the file in Google Chrome.", "Error", JOptionPane.ERROR_MESSAGE);
 	          //  e.printStackTrace(); // Print the stack trace for debugging
 	        }
 	    }
@@ -225,7 +225,7 @@ public class WindowsUtils {
 		    try {
 		        // Check if Desktop is supported (optional)
 		        if (!Desktop.isDesktopSupported()) {
-		            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Mozilla Firefox is not supported on your system.", "Error", JOptionPane.ERROR_MESSAGE);
+		            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Mozilla Firefox is not supported on your system.", "Error", JOptionPane.ERROR_MESSAGE);
 		            return;
 		        }
 
@@ -248,7 +248,7 @@ public class WindowsUtils {
 		        processBuilder.start();
 
 		    } catch (IOException e) {
-		        JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error opening the file in Mozilla Firefox.", "Error", JOptionPane.ERROR_MESSAGE);
+		        JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error opening the file in Mozilla Firefox.", "Error", JOptionPane.ERROR_MESSAGE);
 		        // e.printStackTrace(); // Print the stack trace for debugging
 		    }
 		}
@@ -305,7 +305,7 @@ public class WindowsUtils {
 
 	                    } else if (manualCheck) {
 	                        // Show "You are using the latest version" ONLY if this is a manual check
-	                        JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "You are using the latest version.", "Update Check", JOptionPane.INFORMATION_MESSAGE);
+	                        JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "You are using the latest version.", "Update Check", JOptionPane.INFORMATION_MESSAGE);
 	                    }
 	                }
 	            }else {
@@ -315,7 +315,7 @@ public class WindowsUtils {
 	           // e.printStackTrace();
 	            if (manualCheck) {
 	                // Show an error dialog ONLY if this is a manual check
-	                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error checking for updates.", "Update Check Error", JOptionPane.ERROR_MESSAGE);
+	                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error checking for updates.", "Update Check Error", JOptionPane.ERROR_MESSAGE);
 	            }
 	        }
 	    }
@@ -331,7 +331,7 @@ public class WindowsUtils {
 		    String message = "A new version (" + updateInfo.latest_version + ") is available." + changelogMessage +
 		                     "<br/>Do you want to download it now?";
 
-		    int response = JOptionPane.showConfirmDialog(NotepadXXV1_2_0.getFrame(),
+		    int response = JOptionPane.showConfirmDialog(NotepadXXV1_2_1.getFrame(),
 		            "<html>" + message + "</html>", "Update Available",
 		            JOptionPane.YES_NO_OPTION);
 
@@ -356,7 +356,7 @@ public class WindowsUtils {
 
 	            // Check if the response code is HTTP_OK (200)
 	            if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-	                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Failed to connect to the server. Response code: " + connection.getResponseCode(), "Connection Error", JOptionPane.ERROR_MESSAGE);
+	                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Failed to connect to the server. Response code: " + connection.getResponseCode(), "Connection Error", JOptionPane.ERROR_MESSAGE);
 	                return;
 	            }
 
@@ -366,7 +366,7 @@ public class WindowsUtils {
 	            // Modern GUI for the download process
 	            showModernInstallerGUI(tempFile, url, connection);
 	        } catch (Exception e) {
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error downloading the update: " + e.getMessage(), "Download Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error downloading the update: " + e.getMessage(), "Download Error", JOptionPane.ERROR_MESSAGE);
 	          //  e.printStackTrace(); // Print stack trace for debugging
 	        } finally {
 	            if (connection != null) {
@@ -380,7 +380,7 @@ public class WindowsUtils {
 	        installerFrame.setSize(500, 150);
 	        installerFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	        installerFrame.setLocationRelativeTo(null);
-	        installerFrame.setIconImage(new ImageIcon(new NotepadXXV1_2_0().getClass().getResource("/icons/NotepadXXLogo.png")).getImage());
+	        installerFrame.setIconImage(new ImageIcon(new NotepadXXV1_2_1().getClass().getResource("/icons/NotepadXXLogo.png")).getImage());
 
 	        JLabel statusLabel = new JLabel("Downloading NotepadXX New Version...");
 	        JProgressBar progressBar = new JProgressBar(0, 100);
@@ -463,7 +463,7 @@ public class WindowsUtils {
 	            System.exit(0);
 	        } catch (IOException e) {
 	          //  e.printStackTrace();
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error running the new version of the application.", "Execution Error", JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error running the new version of the application.", "Execution Error", JOptionPane.ERROR_MESSAGE);
 	        }
 	    }
 

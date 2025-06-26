@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
 import com.notepadxx.exit.CLOSE;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 public class Toolbar {
@@ -62,7 +62,7 @@ public class Toolbar {
 	        //JButton lightButton = createToolbarButton("/icons/light.png", e -> notepad.applyTheme("Light"),"Light Mode");
 	        //JButton darkButton = createToolbarButton("/icons/dark.png", e -> notepad.applyTheme("Dark"),"Dark Mode");
 	        JButton reportButton = createToolbarButton("/icons/bug.png", e -> texteditor().reportBug(),"Report a bug");
-	        JButton updateButton = createToolbarButton("/icons/update.png", e ->NotepadXXV1_2_0.onCheckForUpdatesMenuSelected(),"Check for Updates...");
+	        JButton updateButton = createToolbarButton("/icons/update.png", e ->NotepadXXV1_2_1.onCheckForUpdatesMenuSelected(),"Check for Updates...");
 	        JButton edgeButton = createToolbarButton("/icons/edge.png", e -> texteditor().edgeBrowser(),"Open Edge (Ctrl+Alt+E)");
 	        JButton chromeButton = createToolbarButton("/icons/chrome.png", e -> texteditor().chromeBrowser(),"Open Chrome (Ctrl+Alt+C)");
 	        JButton FireFoxButton = createToolbarButton("/icons/firefox (2).png", e -> texteditor().FireFox(),"Open FireFox (Ctrl+Alt+F)");
@@ -142,7 +142,7 @@ public class Toolbar {
         //JButton lightButton = createToolbarButton("/icons/light.png", e -> notepad.applyTheme("Light"),"Light Mode");
         //JButton darkButton = createToolbarButton("/icons/dark.png", e -> notepad.applyTheme("Dark"),"Dark Mode");
         JButton reportButton = createToolbarButton("/icons/bug.png", e -> texteditor().reportBug(),"Report a bug");
-        JButton updateButton = createToolbarButton("/icons/update.png", e -> NotepadXXV1_2_0.onCheckForUpdatesMenuSelected(),"Check for Updates...");
+        JButton updateButton = createToolbarButton("/icons/update.png", e -> NotepadXXV1_2_1.onCheckForUpdatesMenuSelected(),"Check for Updates...");
         JButton edgeButton = createToolbarButton("/icons/firefox (2).png", e -> texteditor().FireFox(),"Open FireFox (Ctrl+Alt+F)");
         JButton chromeButton = createToolbarButton("/icons/chrome.png", e -> texteditor().chromeBrowser(),"Open Chrome (Ctrl+Alt+C)");
         JButton torButton = createToolbarButton("/icons/tor.png", e -> texteditor().TorBrowser(),"Open Tor (Ctrl+Alt+T)");
@@ -194,7 +194,7 @@ public class Toolbar {
 	
 
     private  static JButton createToolbarButton(String iconPath, ActionListener action, String tooltip) {
-        JButton button = new JButton(new ImageIcon(NotepadXXV1_2_0.class.getResource(iconPath)));
+        JButton button = new JButton(new ImageIcon(NotepadXXV1_2_1.class.getResource(iconPath)));
         button.addActionListener(action);
         button.setToolTipText(tooltip); // Set the tooltip text
         button.setFocusable(false); // Make sure the button is not focusable
@@ -202,6 +202,6 @@ public class Toolbar {
     }
 
 	private static Texteditor texteditor() {
-        return NotepadXXV1_2_0.texteditor();
+        return NotepadXXV1_2_1.texteditor();
     }
 	}

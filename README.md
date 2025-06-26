@@ -265,19 +265,19 @@ NotepadXX is available for **Windows** and **Linux**.
 ##  🐧 Linux Installation
 1. **Download the `.tar.gz` File**  
    - Visit [SourceForge](https://sourceforge.net/projects/notepadxx/) or [itch.io](https://raghul-tech.itch.io/notepadxx) and download the Linux version of the `.tar.gz` file:  
-     **NotepadXXV1.2.0-Installer(Linux).tar.gz**
+     **NotepadXXV1.2.1-Installer(Linux).tar.gz**
 
 2. **Extract the File**  
    - Open a terminal and navigate to the directory where the `.tar.gz` file was downloaded.
    - Use the following command to extract the file:  
      ```bash
-     tar -xvzf "NotepadXXV1.2.0-Installer(Linux).tar.gz"
+     tar -xvzf "NotepadXXV1.2.1-Installer(Linux).tar.gz"
      ```
 
 3. **Make the Installer Executable**  
    - Navigate to the extracted folder:  
      ```bash
-     cd "NotepadXXV1.2.0-Installer(Linux)"
+     cd "NotepadXXV1.2.1-Installer(Linux)"
      ```
    - Run the following command to make the `install.sh` script executable:  
      ```bash

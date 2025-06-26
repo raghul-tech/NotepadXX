@@ -9,7 +9,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JTabbedPane;
 
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 import com.notepadxx.resources.icon.GetImage;
 
@@ -33,7 +33,7 @@ public class WindowMenu {
          }
         windowMenu.removeAll(); // Clear previous entries
     	  
-        JTabbedPane tabbedPane = NotepadXXV1_2_0.getTabbedPane();
+        JTabbedPane tabbedPane = NotepadXXV1_2_1.getTabbedPane();
         int selectedIndex = tabbedPane.getSelectedIndex();
         int tabCount = tabbedPane.getTabCount();
 

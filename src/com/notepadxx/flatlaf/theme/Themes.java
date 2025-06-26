@@ -21,7 +21,7 @@ import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import com.formdev.flatlaf.themes.FlatMacLightLaf;
 import com.notepadxx.notepadxx.ConfigFiles;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 public class Themes {
@@ -67,10 +67,10 @@ public class Themes {
 	            saveThemePreference(theme);
 	           currentTheme = theme;
 	            SwingUtilities.invokeLater(() -> {
-	                if (NotepadXXV1_2_0.getFrame() != null) {
-	                     SwingUtilities.updateComponentTreeUI(NotepadXXV1_2_0.getFrame());
+	                if (NotepadXXV1_2_1.getFrame() != null) {
+	                     SwingUtilities.updateComponentTreeUI(NotepadXXV1_2_1.getFrame());
 	           
-	                    if(NotepadXXV1_2_0.texteditor() != null) {
+	                    if(NotepadXXV1_2_1.texteditor() != null) {
 	               
 	                    	applyFont(theme);
 	                    }
@@ -78,7 +78,7 @@ public class Themes {
 	            });
 	        } catch (Exception e) {
 	           // e.printStackTrace();
-	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(),"Error while changing theme ","Error",JOptionPane.ERROR_MESSAGE);
+	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(),"Error while changing theme ","Error",JOptionPane.ERROR_MESSAGE);
 	        }
 	    }
 
@@ -247,7 +247,7 @@ public class Themes {
 	            prop.store(output, "NotepadXX V1.2.0 Theme Configuration");
 	        } catch (IOException e) {
 	           // e.printStackTrace();
-	        	JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "An error occurred while saving your theme preference.\n Please try again.", "Theme not saved", JOptionPane.INFORMATION_MESSAGE);
+	        	JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "An error occurred while saving your theme preference.\n Please try again.", "Theme not saved", JOptionPane.INFORMATION_MESSAGE);
 	        }
 	    }
 

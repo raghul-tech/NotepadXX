@@ -14,9 +14,10 @@ import org.fife.ui.rtextarea.RTextScrollPane;
 
 import com.notepadxx.filewatcher.FileWatcher;
 import com.notepadxx.menu.LanguageMenuBar;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 import com.notepadxx.open.RenameFile;
+import com.notepadxx.utils.JavaFXUtils;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -58,7 +59,7 @@ public class saveAs {
 					  return;
 				  }
 				 //});
-			    if (SAVE.isJavaFXAvailable()) {
+			    if (JavaFXUtils.isJavaFXAvailable()) {
 			    // Initialize JavaFX FileChooser for file saving
 			    SwingUtilities.invokeLater(() -> {
 			        new JFXPanel(); // Initializes JavaFX runtime
@@ -80,7 +81,7 @@ public class saveAs {
 	                    dummyStage.setY(-1000);
 	                    dummyStage.show(); // You must show it, even if off-screen
 
-			            Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+			            Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 			         // Set the initial directory
 			            if (currentFile != null && currentFile.getParentFile() != null) {
 			                // Priority 1: Parent directory of the current file
@@ -139,9 +140,9 @@ public class saveAs {
 						 
 							      
 			                }else {
-			                NotepadXXV1_2_0.openNewTab(null);
+			                NotepadXXV1_2_1.openNewTab(null);
 			               
-                            Texteditor editor1 = (Texteditor)  NotepadXXV1_2_0.getTabbedPane().getSelectedComponent();
+                            Texteditor editor1 = (Texteditor)  NotepadXXV1_2_1.getTabbedPane().getSelectedComponent();
                             if (editor1 != null) {
                                 editor1.setTextContent(editor.getTextContent());
                                 editor1.setOriginalContent("");
@@ -181,7 +182,7 @@ public class saveAs {
 			     int scrollPos = verticalScrollBar.getValue();
 			     String defaultFileName = tabTitle + ".txt";
 
-			     Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+			     Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 			     // Set the initial directory
 			     if (currentFile != null && currentFile.getParentFile() != null) {
 			         fileChooser.setCurrentDirectory(currentFile.getParentFile());
@@ -233,9 +234,9 @@ public class saveAs {
 					      LanguageMenuBar.setLanguageForFile(currentFile.toString(), ext.toLowerCase());
 					      
 		                }else {
-		                NotepadXXV1_2_0.openNewTab(null);
+		                NotepadXXV1_2_1.openNewTab(null);
 		               
-                     Texteditor editor1 = (Texteditor)  NotepadXXV1_2_0.getTabbedPane().getSelectedComponent();
+                     Texteditor editor1 = (Texteditor)  NotepadXXV1_2_1.getTabbedPane().getSelectedComponent();
                      if (editor1 != null) {
                          editor1.setTextContent(editor.getTextContent());
                          editor1.setOriginalContent("");

@@ -180,7 +180,7 @@ public class AboutMenu {
         title.setFont(Font.font("SF Pro Display", FontWeight.BOLD, 28));
         title.setTextFill(Color.web("#2c2c2e"));
         
-        Label version = new Label("Version 1.2.0");
+        Label version = new Label("Version 1.2.1");
         version.setFont(Font.font("SF Pro Text", 14));
         version.setTextFill(Color.web("#636366"));
         

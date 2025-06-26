@@ -11,7 +11,7 @@ import javax.swing.KeyStroke;
 
 import com.notepadxx.exit.CLOSE;
 import com.notepadxx.exit.ExitFrame;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 public class LinuxMenuBar {
@@ -293,7 +293,7 @@ public class LinuxMenuBar {
 	*/
 	
 	private static Texteditor texteditor() {
-	        return NotepadXXV1_2_0.texteditor();
+	        return NotepadXXV1_2_1.texteditor();
 	    }
 	/***
 	 * 
@@ -344,9 +344,9 @@ public class LinuxMenuBar {
 	    fileMenu.add(createMenuItem.apply("Close Tab", "Ctrl+W", e -> CLOSE.closeTab(texteditor())));
 	    fileMenu.add(createMenuItem.apply("Close All Tabs", "Ctrl+Shift+W", e -> CLOSE.closeAllTab()));
 	    fileMenu.addSeparator();
-	    fileMenu.add(createMenuItem.apply("Restore Recent Closed File", "Ctrl+Shift+T", e -> NotepadXXV1_2_0.openRecentClosedTab()));
-	    fileMenu.add(createMenuItem.apply("Open All Recent Files", "", e -> NotepadXXV1_2_0.openAllRecentClosedTabs()));
-	    fileMenu.add(createMenuItem.apply("Empty All Recent File List", "", e -> NotepadXXV1_2_0.clearAllRecentClosedTabs()));
+	    fileMenu.add(createMenuItem.apply("Restore Recent Closed File", "Ctrl+Shift+T", e -> NotepadXXV1_2_1.openRecentClosedTab()));
+	    fileMenu.add(createMenuItem.apply("Open All Recent Files", "", e -> NotepadXXV1_2_1.openAllRecentClosedTabs()));
+	    fileMenu.add(createMenuItem.apply("Empty All Recent File List", "", e -> NotepadXXV1_2_1.clearAllRecentClosedTabs()));
 	    fileMenu.addSeparator();
 	    fileMenu.add(createMenuItem.apply("Exit", "Alt+F4", e -> ExitFrame.exit()));
 
@@ -409,7 +409,7 @@ public class LinuxMenuBar {
 	    discordItem.addActionListener(e -> texteditor().Discord());
 	    helpMenu.add(discordItem);
 	    helpMenu.addSeparator(); 
-	    helpMenu.add(createMenuItem.apply("Check for Updates...", "", e -> NotepadXXV1_2_0.onCheckForUpdatesMenuSelected()));
+	    helpMenu.add(createMenuItem.apply("Check for Updates...", "", e -> NotepadXXV1_2_1.onCheckForUpdatesMenuSelected()));
 
 	    // Add all menus to menu bar
 	    menuBar.add(fileMenu);

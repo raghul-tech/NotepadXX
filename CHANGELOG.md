@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.2.1] - 2025-06-26
+
+### 🎯 Added
+- **Windows App Certification Compliance**: Successfully packaged and published to the Microsoft Store using the MSIX Packaging Tool.
+
+- **Error Handling Enhancements**: Markdown Preview now gracefully disables on headless or unsupported environments (e.g., JavaFX not available), with clear user feedback.
+
+- **Startup Safety Checks**: Prevented preview window and JavaFX initialization in unsupported environments, reducing crashes.
+
+### 🐛 Fixed
+- **Crash During Startup**: Fixed a rare crash caused when JavaFX was not supported or system was in headless mode.
+
+- **WebView Rendering Failures**: Added defensive coding to skip WebView-based rendering if not supported.
+
+- **Preview Button Unresponsiveness**: Fixed Ctrl+K / Ctrl+Shift+K not opening preview on some systems with partial JavaFX setup.
+
+### 🚀 Deployment
+- **MSIX Packaging Optimized**: Improved app structure for compatibility with Windows Store guidelines.
+
+
+
+---
+
 ## [1.2.0] - 2025-06-9
 
 ### Added

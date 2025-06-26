@@ -10,8 +10,9 @@ import javax.swing.SwingUtilities;
 
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
+import com.notepadxx.utils.JavaFXUtils;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -41,7 +42,7 @@ public class openFile {
 		 
 	protected synchronized void openFile1() {
 	    // Try to initialize JavaFX and use its FileChooser if available
-	    if (OPEN.isJavaFXAvailable()) {
+	    if (JavaFXUtils.isJavaFXAvailable()) {
 	        // JavaFX FileChooser block
 	        try {
 	            SwingUtilities.invokeLater(() -> {
@@ -61,7 +62,7 @@ public class openFile {
 	                    dummyStage.setY(-1000);
 	                    dummyStage.show(); // You must show it, even if off-screen
 	                  
-	                    Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+	                    Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 	                    // Set the initial directory
 	                    if (currentFile != null && currentFile.getParentFile() != null) {
 	                        fileChooser.setInitialDirectory(currentFile.getParentFile());
@@ -85,7 +86,7 @@ public class openFile {
 	                    if (selectedFile != null) {
 	                        SwingUtilities.invokeLater(() -> {
 	                            if (currentFile != null || isModified) {
-	                               NotepadXXV1_2_0.openNewTab(selectedFile);
+	                               NotepadXXV1_2_1.openNewTab(selectedFile);
 	                            } else {
 	                       		loadFile	 L = new loadFile(editor, tabTitle, textArea);
 	                       			L.fileSizeToOpen(selectedFile);
@@ -122,7 +123,7 @@ public class openFile {
 	    	        fileChooser.setDialogTitle("Open File");
 	    	      
 	            // Set the initial directory
-	            Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+	            Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 	            if (currentFile != null && currentFile.getParentFile() != null) {
 	                fileChooser.setCurrentDirectory(currentFile.getParentFile());
 	            }else if(previousEditor!=null && previousEditor.getCurrentFile()!=null){ 
@@ -141,7 +142,7 @@ public class openFile {
 	                File selectedFile = fileChooser.getSelectedFile();
 	                if (selectedFile != null) {
 	                    if (currentFile != null || isModified) {
-	                       NotepadXXV1_2_0.openNewTab(selectedFile);
+	                       NotepadXXV1_2_1.openNewTab(selectedFile);
 	                    } else {
 	                    	loadFile	 L = new loadFile(editor, tabTitle, textArea);
                    			L.fileSizeToOpen(selectedFile);

@@ -23,7 +23,7 @@ import javax.swing.SwingWorker;
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 
 import com.notepadxx.exit.CLOSE;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 public class loadFile {
@@ -363,7 +363,7 @@ public class loadFile {
                 	System.gc();
                 	
                 	  SwingUtilities.invokeLater(() -> {
-                          NotepadXXV1_2_0.openOutOfMemoryErrorTab(file);
+                          NotepadXXV1_2_1.openOutOfMemoryErrorTab(file);
                          
                           CLOSE.closeTab(editor);
                        //   new FileWatcher(file,textArea).stopWatching();

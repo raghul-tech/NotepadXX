@@ -175,6 +175,7 @@ public class Shortcut {
 		                  if (CheckCode.isItMD(ext)) {
 		            	editor.openMarkdownPreviewWindow(editor);
 		                  }
+		                  
 		             }
 		         });
 
@@ -265,7 +266,7 @@ public class Shortcut {
 		         actionMap.put("Open Recent Tab", new AbstractAction() {
 		             @Override
 		             public void actionPerformed(ActionEvent e) {
-		                 NotepadXXV1_2_0.openRecentClosedTab();
+		                 NotepadXXV1_2_1.openRecentClosedTab();
 		             }
 		         });
 
@@ -340,14 +341,14 @@ public class Shortcut {
 	
 	@SuppressWarnings("serial")
 	private void addTabShortcut() {
-		 InputMap inputMap = NotepadXXV1_2_0.getFrame().getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
-	        ActionMap actionMap = NotepadXXV1_2_0.getFrame().getRootPane().getActionMap();
+		 InputMap inputMap = NotepadXXV1_2_1.getFrame().getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+	        ActionMap actionMap = NotepadXXV1_2_1.getFrame().getRootPane().getActionMap();
 	        // Ctrl + right arrow to move to the right side of the tab
 	         inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_RIGHT, InputEvent.CTRL_DOWN_MASK), "Tab Right");
 	         actionMap.put("Tab Right", new AbstractAction() {
 	             @Override
 	             public void actionPerformed(ActionEvent e) {
-	                 NotepadXXV1_2_0.moveRight();
+	                 NotepadXXV1_2_1.moveRight();
 	             }
 	         }); 
 	         
@@ -356,7 +357,7 @@ public class Shortcut {
 	         actionMap.put("Tab Left", new AbstractAction() {
 	             @Override
 	             public void actionPerformed(ActionEvent e) {
-	                 NotepadXXV1_2_0.moveLeft();
+	                 NotepadXXV1_2_1.moveLeft();
 	             }
 	         }); 
 	         
@@ -365,7 +366,7 @@ public class Shortcut {
 	         actionMap.put("Move Tab Right", new AbstractAction() {
 	             @Override
 	             public void actionPerformed(ActionEvent e) {
-	                 NotepadXXV1_2_0.moveTabRight();
+	                 NotepadXXV1_2_1.moveTabRight();
 	             }
 	         }); 
 	         
@@ -374,7 +375,7 @@ public class Shortcut {
 	         actionMap.put("Move Tab Left", new AbstractAction() {
 	             @Override
 	             public void actionPerformed(ActionEvent e) {
-	                 NotepadXXV1_2_0.moveTabLeft();
+	                 NotepadXXV1_2_1.moveTabLeft();
 	             }
 	         }); 
 	

@@ -21,6 +21,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 import com.notepadxx.notepadxx.Texteditor;
+import com.notepadxx.utils.JavaFXUtils;
 import com.vladsch.flexmark.ext.gfm.strikethrough.StrikethroughExtension;
 import com.vladsch.flexmark.ext.gfm.tasklist.TaskListExtension;
 import com.vladsch.flexmark.ext.gfm.users.GfmUsersExtension;
@@ -40,7 +41,7 @@ import javafx.stage.WindowEvent;
 import netscape.javascript.JSObject;
 
 public class MarkdownPreviewWindow {
-    private static volatile boolean javaFXInitialized = false;
+  //  private static volatile boolean javaFXInitialized = JavaFXUtils.isJavaFXAvailable();
     private ExecutorService executor;
     private Stage previewStage;
     private WebEngine engine;
@@ -53,7 +54,16 @@ public class MarkdownPreviewWindow {
     public MarkdownPreviewWindow(Texteditor sourceEditor) {
         this.sourceEditor = sourceEditor; 
         try {
-        initializeJavaFX(); 
+        	 if (!JavaFXUtils.isJavaFXAvailable()) {
+        		  JOptionPane.showMessageDialog(
+        			        sourceEditor, 
+        			        "Markdown Preview is not supported on this system.\n(JavaFX is not available.)", 
+        			        "Feature Not Available", 
+        			        JOptionPane.WARNING_MESSAGE
+        			    );
+        		  return;
+        	    }
+     //   initializeJavaFX(); 
         createExecutor();
         setupUpdateTimer();
         createAndShowPreviewWindow();
@@ -72,23 +82,18 @@ public class MarkdownPreviewWindow {
             });
         }
     }
-    private void initializeJavaFX() {
+   /* private void initializeJavaFX() {
         if (!javaFXInitialized) {
             try {
-            	 if (Platform.isFxApplicationThread()) {
- 		            Platform.exit();
- 		        }
-                Platform.startup(() -> {
-                    Platform.setImplicitExit(false);
+            	JavaFXUtils.initializeJavaFX();
                     javaFXInitialized = true;
-                });
             } catch (IllegalStateException e) {
                 // JavaFX is already running
                 Platform.runLater(() -> {});
                 javaFXInitialized = true;
             }
         }
-    }
+    }*/
 
 
    /* private void initializeJavaFX1() {
@@ -687,7 +692,9 @@ public class MarkdownPreviewWindow {
             Platform.runLater(() -> {
                 try {
                     cleanupFxResources();
-                } finally {
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }finally {
                     cleanupLatch.countDown();
                 }
             });
@@ -722,6 +729,15 @@ public class MarkdownPreviewWindow {
     }
     
     public synchronized void reopen() {
+    	 if (!JavaFXUtils.isJavaFXAvailable()) {
+             JOptionPane.showMessageDialog(
+                 sourceEditor,
+                 "Markdown Preview is not supported on this system.\n(JavaFX is not available.)",
+                 "Feature Not Available",
+                 JOptionPane.WARNING_MESSAGE
+             );
+             return;
+         }
         if (!disposed) {
             dispose();
         }

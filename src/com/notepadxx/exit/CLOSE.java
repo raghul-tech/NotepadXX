@@ -9,23 +9,23 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 public class CLOSE {
 
-	//private static NotepadXXV1_2_0 notepad = new NotepadXXV1_2_0();
+	//private static NotepadXXV1_2_1 notepad = new NotepadXXV1_2_1();
 	
 	public static void closeTab(Component selectedComp) {
 	    SwingUtilities.invokeLater(() -> {
 
-	   //     Component selectedComp = NotepadXXV1_2_0.getTabbedPane().getSelectedComponent();
+	   //     Component selectedComp = NotepadXXV1_2_1.getTabbedPane().getSelectedComponent();
  
 	    	
 	        // If the selected component is not a Texteditor, just close it
 	        if (selectedComp == null || !(selectedComp instanceof Texteditor)) {
-	            NotepadXXV1_2_0.getTabbedPane().remove(selectedComp);
-	            NotepadXXV1_2_0.checkAndOpenDefaultTab();
+	            NotepadXXV1_2_1.getTabbedPane().remove(selectedComp);
+	            NotepadXXV1_2_1.checkAndOpenDefaultTab();
 	            return;
 	        }
 
@@ -63,7 +63,7 @@ public class CLOSE {
 	            }
 	        }
 
-	        NotepadXXV1_2_0.checkAndOpenDefaultTab();
+	        NotepadXXV1_2_1.checkAndOpenDefaultTab();
 	    });
 	}
 	public static void closeAllTab() {
@@ -72,15 +72,15 @@ public class CLOSE {
 
 	        @Override
 	        protected Void doInBackground() {
-	            int tabCount = NotepadXXV1_2_0.getTabbedPane().getTabCount();
+	            int tabCount = NotepadXXV1_2_1.getTabbedPane().getTabCount();
 
 	            for (int i = tabCount - 1; i >= 0; i--) {
-	                Component comp = NotepadXXV1_2_0.getTabbedPane().getComponentAt(i);
+	                Component comp = NotepadXXV1_2_1.getTabbedPane().getComponentAt(i);
 
 	                if (comp instanceof Texteditor tab) {
 	                    if (tab.getisModified() && !tab.getTextArea().getText().isEmpty()) {
 	                        int confirm = JOptionPane.showConfirmDialog(
-	                                NotepadXXV1_2_0.getFrame(),
+	                                NotepadXXV1_2_1.getFrame(),
 	                                "Save file '" + tab.getTabTitle() + "'?",
 	                                "Save",
 	                                JOptionPane.YES_NO_CANCEL_OPTION
@@ -123,11 +123,11 @@ public class CLOSE {
 	                    if (tab instanceof Texteditor editor) {
 	                        updateForClosebtn(editor);
 	                    } else {
-	                        NotepadXXV1_2_0.getTabbedPane().remove(tab);
+	                        NotepadXXV1_2_1.getTabbedPane().remove(tab);
 	                    }
 	                }
 
-	                NotepadXXV1_2_0.checkAndOpenDefaultTab();
+	                NotepadXXV1_2_1.checkAndOpenDefaultTab();
 	            });
 	        }
 	    };
@@ -140,7 +140,7 @@ public class CLOSE {
 
 	    File closedFile = tab.getCurrentFile();
 	    String fileText = tab.getTextArea() != null ? tab.getTextArea().getText() : "";
-	    NotepadXXV1_2_0.saveClosedTab(closedFile, fileText);
+	    NotepadXXV1_2_1.saveClosedTab(closedFile, fileText);
 	  
 	 /*   if(tab.currentFile != null) {
          removeEntry(tab.currentFile.toString());
@@ -158,19 +158,19 @@ public class CLOSE {
 	    
 	 //   SwingUtilities.invokeLater(() -> {
 	        // Remove the tab from the JTabbedPane
-	        int index = NotepadXXV1_2_0.getTabbedPane().indexOfComponent(tab);
+	        int index = NotepadXXV1_2_1.getTabbedPane().indexOfComponent(tab);
 	        try {
 	        if (index != -1) {
-	            NotepadXXV1_2_0.getTabbedPane().remove(index);
+	            NotepadXXV1_2_1.getTabbedPane().remove(index);
 	        }
 	        }catch(Exception e ) {}
 	        finally {
-	        	 NotepadXXV1_2_0.checkAndOpenDefaultTab();
+	        	 NotepadXXV1_2_1.checkAndOpenDefaultTab();
 	        }
 	   // notepad.getTabbedPane().remove(tab);
 
 	        // Check if a default tab needs to be opened
-	      //  NotepadXXV1_2_0.checkAndOpenDefaultTab();
+	      //  NotepadXXV1_2_1.checkAndOpenDefaultTab();
 	 //   });
 	
 	}

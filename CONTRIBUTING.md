@@ -8,7 +8,7 @@ This guide will help you understand how to contribute, set up the project locall
 
 ## 📁 Project Structure
 
-- Main Entry File: `com.notepadxx.notepadxx.NotepadXXV1_2_0.java`
+- Main Entry File: `com.notepadxx.notepadxx.NotepadXXV1_2_1.java`
 - Written in Java 23
 - Uses external JARs and JavaFX
 - OS-Specific logic is handled within the code (Linux & Windows)
@@ -46,14 +46,14 @@ Use your IDE (e.g., IntelliJ, Eclipse) or a build tool (like Gradle/Maven if add
 3. **Run the App**
 
 - Run the main file using the Run ▶️ button in Eclipse.
-	- Entry Point `com.notepadxx.notepadxx.NotepadXXV1_2_0`
+	- Entry Point `com.notepadxx.notepadxx.NotepadXXV1_2_1`
 - If running from terminal (optional for advanced users):
 	```bash
-	java -cp ".:lib/*" com.notepadxx.notepadxx.NotepadXXV1_2_0
+	java -cp ".:lib/*" com.notepadxx.notepadxx.NotepadXXV1_2_1
      ```
      > On Windows, use `;` instead of `:` in the classpath:
      ```bash
-	java -cp ".;lib/*" com.notepadxx.notepadxx.NotepadXXV1_2_0
+	java -cp ".;lib/*" com.notepadxx.notepadxx.NotepadXXV1_2_1
      ```
      
 4. **Cross-Platform Support**

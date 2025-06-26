@@ -12,8 +12,9 @@ import javax.swing.SwingWorker;
 
 import com.notepadxx.menu.CodeAnalysisMenuBar;
 import com.notepadxx.menu.LanguageMenuBar;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
+import com.notepadxx.utils.JavaFXUtils;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -28,23 +29,23 @@ public class ExitFrame {
 	        if (frame == null) return;
 
 	        // First remove any non-Texteditor tabs
-	        for (int i = NotepadXXV1_2_0.getTabbedPane().getTabCount() - 1; i >= 0; i--) {
-	            Component comp = NotepadXXV1_2_0.getTabbedPane().getComponentAt(i);
+	        for (int i = NotepadXXV1_2_1.getTabbedPane().getTabCount() - 1; i >= 0; i--) {
+	            Component comp = NotepadXXV1_2_1.getTabbedPane().getComponentAt(i);
 	            if (!(comp instanceof Texteditor)) {
-	                NotepadXXV1_2_0.getTabbedPane().removeTabAt(i);
+	                NotepadXXV1_2_1.getTabbedPane().removeTabAt(i);
 	            }
 	        }
 	        
 	        // Check if there are unsaved changes
 	        boolean hasUnsavedChanges = false;
 
-	        for (int i = 0; i < NotepadXXV1_2_0.getTabbedPane().getTabCount(); i++) {
-	            Texteditor editor = (Texteditor) NotepadXXV1_2_0.getTabbedPane().getComponentAt(i);
+	        for (int i = 0; i < NotepadXXV1_2_1.getTabbedPane().getTabCount(); i++) {
+	            Texteditor editor = (Texteditor) NotepadXXV1_2_1.getTabbedPane().getComponentAt(i);
 	            if (editor.getisModified()) {
 	                hasUnsavedChanges = true;
 	                break;
 	            }
-	        /*	Component comp = NotepadXXV1_2_0.getTabbedPane1().getComponentAt(i);
+	        /*	Component comp = NotepadXXV1_2_1.getTabbedPane1().getComponentAt(i);
 
 	            if (comp instanceof Texteditor) {
 	                Texteditor editor = (Texteditor) comp;
@@ -53,14 +54,14 @@ public class ExitFrame {
 	                }
 	            } else {
 	                // Remove the tab if it is not a Texteditor
-	                NotepadXXV1_2_0.getTabbedPane1().removeTabAt(i);
+	                NotepadXXV1_2_1.getTabbedPane1().removeTabAt(i);
 	            }*/
 	        }
 
 	        // If there are unsaved changes, ask the user
 	        if (hasUnsavedChanges) {
 	       
-	        	int option = JOptionPane.showConfirmDialog(NotepadXXV1_2_0.getFrame(),
+	        	int option = JOptionPane.showConfirmDialog(NotepadXXV1_2_1.getFrame(),
 	        		    "Save changes before closing?",
 	        		    "Unsaved Changes",
 	        		    JOptionPane.YES_NO_CANCEL_OPTION,
@@ -100,15 +101,15 @@ public class ExitFrame {
 	}
 
 	private static void updateForWindowClosing(JFrame frame) {
-		/* NotepadXXV1_2_0.saveOpenedFiles();
-		 NotepadXXV1_2_0.saveWindowSize(frame.getSize());*/
+		/* NotepadXXV1_2_1.saveOpenedFiles();
+		 NotepadXXV1_2_1.saveWindowSize(frame.getSize());*/
 		/*if(editor.getMDwindow() != null) {
 	    	editor.getMDwindow().dispose();
 	    	}
 		if(editor.getMDTab() != null) {
 	    	editor.getMDTab().dispose();
 	    	}*/
-		 NotepadXXV1_2_0.clearAllRecentClosedTabs();
+		 NotepadXXV1_2_1.clearAllRecentClosedTabs();
 	     ClearMenuComponentFiles();
 	     frame.dispose();
 	      System.exit(0); 
@@ -119,11 +120,11 @@ public class ExitFrame {
 	    // Ensure JavaFX is initialized
 	  //  new JFXPanel(); // Only needed once in your application
 		
-	    int tabCount = NotepadXXV1_2_0.getTabbedPane().getTabCount();
+	    int tabCount = NotepadXXV1_2_1.getTabbedPane().getTabCount();
 	    boolean allSaved = true; // Track if all files are saved successfully
 
 	    for (int i = 0; i < tabCount; i++) {
-	        Component component = NotepadXXV1_2_0.getTabbedPane().getComponentAt(i);
+	        Component component = NotepadXXV1_2_1.getTabbedPane().getComponentAt(i);
 	        if (component instanceof Texteditor) {
 	            Texteditor editor = (Texteditor) component;
 	            if (!editor.getisModified()) {
@@ -177,7 +178,7 @@ public class ExitFrame {
 	}
 
 	private static File promptUserToSaveFile(Texteditor editor) {
-	    if (editor.isJavaFXAvailable()) {
+	    if (JavaFXUtils.isJavaFXAvailable()) {
 	        return showJavaFXFileChooser(editor);
 	    } else {
 	        return showSwingFileChooser(editor);
@@ -197,7 +198,7 @@ public class ExitFrame {
 	    //    fileChooser.setInitialFileName(editor.getTabTitle() + ".txt");
 	        fileChooser.setInitialFileName(defaultFileName);
 
-	        Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+	        Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 	        // Set the initial directory
 	           if (editor.getCurrentFile() != null && editor.getCurrentFile().getParentFile() != null) {
 	               // Priority 1: Parent directory of the current file
@@ -261,7 +262,7 @@ public class ExitFrame {
 	                          : "Untitled.txt";
 	 fileChooser.setSelectedFile(new File(defaultFileName));
 
-	 Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+	 Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 	 // Set the initial directory
 	 if (editor.getCurrentFile() != null && editor.getCurrentFile().getParentFile() != null) {
 	     fileChooser.setCurrentDirectory(editor.getCurrentFile().getParentFile());
@@ -306,9 +307,9 @@ public class ExitFrame {
 	}
 	
 		public static  void exit() {
-		    NotepadXXV1_2_0.saveOpenedFiles();
-		    NotepadXXV1_2_0.saveWindowSize(NotepadXXV1_2_0.getFrameSize());
-		    handleWindowClosing(NotepadXXV1_2_0.getFrame());
+		    NotepadXXV1_2_1.saveOpenedFiles();
+		    NotepadXXV1_2_1.saveWindowSize(NotepadXXV1_2_1.getFrameSize());
+		    handleWindowClosing(NotepadXXV1_2_1.getFrame());
 		}
 		
 		private static void ClearMenuComponentFiles() {
@@ -316,6 +317,6 @@ public class ExitFrame {
 			LanguageMenuBar.clearConfigLanguageFile();
 			CodeAnalysisMenuBar.clearConfigCodeAnalysisFile();
 		}
-
-	
+		
+		
 }

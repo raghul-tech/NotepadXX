@@ -6,7 +6,7 @@ import javax.swing.JMenuItem;
 
 import com.notepadxx.exit.CLOSE;
 import com.notepadxx.exit.ExitFrame;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 
@@ -93,9 +93,9 @@ public class WindowsMenuBar {
         RenameFile.addActionListener(e -> texteditor().RenameFile());
         closeTab.addActionListener(e -> CLOSE.closeTab(texteditor()));
         closeAllTab.addActionListener(e -> CLOSE.closeAllTab());
-        restoreRecentFile.addActionListener(e -> NotepadXXV1_2_0.openRecentClosedTab());
-        openAllRecentFiles.addActionListener(e -> NotepadXXV1_2_0.openAllRecentClosedTabs());
-        emptyAllRecentFiles.addActionListener(e -> NotepadXXV1_2_0.clearAllRecentClosedTabs());
+        restoreRecentFile.addActionListener(e -> NotepadXXV1_2_1.openRecentClosedTab());
+        openAllRecentFiles.addActionListener(e -> NotepadXXV1_2_1.openAllRecentClosedTabs());
+        emptyAllRecentFiles.addActionListener(e -> NotepadXXV1_2_1.clearAllRecentClosedTabs());
         ExitTab.addActionListener(e -> ExitFrame.exit());
 
         //Edit menu
@@ -128,7 +128,7 @@ public class WindowsMenuBar {
         resetFont.addActionListener(e -> texteditor().resetFontSize());
 
         //Help Menu
-        checkForUpdatesItem.addActionListener(e -> NotepadXXV1_2_0.onCheckForUpdatesMenuSelected() );//.checkForUpdates());
+        checkForUpdatesItem.addActionListener(e -> NotepadXXV1_2_1.onCheckForUpdatesMenuSelected() );//.checkForUpdates());
         aboutItem.addActionListener(e -> AboutMenu.showAboutDialog());
         reportBugItem.addActionListener(e -> texteditor().reportBug());
        DiscordItem.addActionListener(e -> texteditor().Discord());
@@ -221,7 +221,7 @@ public class WindowsMenuBar {
         return menuBar;
     }
 	private static Texteditor texteditor() {
-        return NotepadXXV1_2_0.texteditor();
+        return NotepadXXV1_2_1.texteditor();
     }
 
 }

@@ -33,7 +33,7 @@ public class SplashScreen {
         appNameLabel.setForeground(Color.WHITE);
         appNameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         
-        JLabel versionLabel = new JLabel("v1.2.0");
+        JLabel versionLabel = new JLabel("v1.2.1");
         versionLabel.setFont(new Font("Segoe UI", Font.PLAIN, 14));
         versionLabel.setForeground(new Color(180, 180, 180));
         versionLabel.setAlignmentX(Component.CENTER_ALIGNMENT);

@@ -4,7 +4,7 @@ import javax.swing.Action;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JMenu;
 
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.syntaxchecker.hightlightline;
 
 public class PreferenceMenu {
@@ -41,7 +41,7 @@ public class PreferenceMenu {
 		    tooltipItem.setToolTipText("Toggle tooltip display");
 		    tooltipItem.addActionListener(e -> {
 		  
-		        Action action = NotepadXXV1_2_0.texteditor().getTextArea()
+		        Action action = NotepadXXV1_2_1.texteditor().getTextArea()
 		                         .getActionMap().get("tooltip on or off");
 		        if (action != null) {
 		            action.actionPerformed(null);
@@ -55,7 +55,7 @@ public class PreferenceMenu {
 		    modeItem.setToolTipText("Toggle between Noraml/Advanced Tooltips");
 		    modeItem.addActionListener(e -> {
 		
-		    	 Action action = NotepadXXV1_2_0.texteditor().getTextArea()
+		    	 Action action = NotepadXXV1_2_1.texteditor().getTextArea()
                          .getActionMap().get("Advanced mode");
         if (action != null) {
             action.actionPerformed(null);
@@ -69,7 +69,7 @@ public class PreferenceMenu {
 		    wrapItem.setSelected(isWordWrapEnabled());
 		    wrapItem.setToolTipText("Toggle line wrapping");
 		    wrapItem.addActionListener(e -> {
-		        NotepadXXV1_2_0.updateLineWrapForAllTabs(wrapItem.isSelected());
+		        NotepadXXV1_2_1.updateLineWrapForAllTabs(wrapItem.isSelected());
 		    //    savePreference(WORD_WRAP_KEY, wrapItem.isSelected());
 		        wrap_key=wrapItem.isSelected();
 		       

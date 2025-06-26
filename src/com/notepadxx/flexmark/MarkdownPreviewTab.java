@@ -18,7 +18,6 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
-// import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -43,6 +42,7 @@ import javax.swing.event.DocumentListener;
 import com.formdev.flatlaf.FlatLaf;
 import com.notepadxx.notepadxx.Texteditor;
 import com.notepadxx.resources.icon.GetImage;
+import com.notepadxx.utils.JavaFXUtils;
 import com.vladsch.flexmark.ext.gfm.strikethrough.StrikethroughExtension;
 import com.vladsch.flexmark.ext.gfm.tasklist.TaskListExtension;
 import com.vladsch.flexmark.ext.gfm.users.GfmUsersExtension;
@@ -62,7 +62,7 @@ import netscape.javascript.JSObject;
 public class MarkdownPreviewTab { 
 	
 private final JTabbedPane tabbedPane;
-private static volatile boolean javaFXInitialized = false; // Make volatile for thread safety
+//private static volatile boolean javaFXInitialized = JavaFXUtils.isJavaFXAvailable(); // Make volatile for thread safety
 private final Map<Texteditor, JFXPanel> previewMap = new HashMap<>();
 private final Map<JFXPanel, WebEngine> engineMap = new HashMap<>();
 private final Timer updateTimer;
@@ -105,7 +105,7 @@ public MarkdownPreviewTab(JTabbedPane tabbedPane) {
         }
     });
     updateTimer.setRepeats(false);
-    initializeJavaFX(); // Initialize JavaFX subsystem
+  //  initializeJavaFX(); // Initialize JavaFX subsystem
 }
 
 // Helper to find editor by identity hash code
@@ -119,23 +119,6 @@ private Texteditor findEditorByHashCode(int hashCode) {
     return null;
 }
 
-private void initializeJavaFX() {
-    if (!javaFXInitialized) {
-        try {
-        	 if (Platform.isFxApplicationThread()) {
-		            Platform.exit();
-		        }
-            Platform.startup(() -> {
-                Platform.setImplicitExit(false);
-                javaFXInitialized = true;
-            });
-        } catch (IllegalStateException e) {
-            // JavaFX is already running
-            Platform.runLater(() -> {});
-            javaFXInitialized = true;
-        }
-    }
-}
 
 // --- Real-time Update Logic --- (No changes needed here)
  private void attachDocumentListener(Texteditor sourceEditor, JFXPanel fxPanel) {
@@ -220,12 +203,15 @@ private void updatePreviewContent(Texteditor sourceEditor) {
 // --- Tab Opening Logic ---
 public void openMarkdownPreviewTabFX(Texteditor sourceEditor) { // Make public if called from outside
     // Ensure FX is ready before proceeding
-    if (!javaFXInitialized) {
-        showErrorDialog("JavaFX not ready. Cannot open preview.", new IllegalStateException("JavaFX Runtime not initialized"));
-        // Optionally try initializing again, but might indicate a deeper issue
-        // initializeJavaFX();
-        return;
-    }
+	 if (!JavaFXUtils.isJavaFXAvailable()) {
+         JOptionPane.showMessageDialog(
+             sourceEditor,
+             "Markdown Preview is not supported on this system.\n(JavaFX is not available.)",
+             "Feature Not Available",
+             JOptionPane.WARNING_MESSAGE
+         );
+         return;
+     }
 
     // Check for existing preview tab
     if (previewMap.containsKey(sourceEditor)) {
@@ -494,7 +480,6 @@ private void cleanupPreviewResources(Texteditor editor, JFXPanel panel) {
      });
 }
 
-// Helper to show errors (no changes needed)
 private void showErrorDialog(String message, Exception e) {
   //  System.err.println(message + ": " + e.getMessage()); // Log error too
     // e.printStackTrace(); // Uncomment for debugging stack trace

@@ -58,13 +58,12 @@ import com.notepadxx.open.LazyLoading;
 import com.notepadxx.resources.icon.GetImage;
 import com.notepadxx.rsyntaxtextarea.syntaxhightlighter.SyntaxHighlighter;
 import com.notepadxx.toolbar.Toolbar;
+import com.notepadxx.utils.JavaFXUtils;
 import com.notepadxx.utils.LinuxUtils;
-import com.notepadxx.utils.WindowsUtils;
-
-import javafx.application.Platform; 
+import com.notepadxx.utils.WindowsUtils; 
 
  
-public class  NotepadXXV1_2_0 {
+public class  NotepadXXV1_2_1 {
     private static final String APP_DIR = ConfigFiles.getAppDir();
     private static final String CONFIG_FILE_THEME = ConfigFiles.getConfigFileTheme();
     private static final String CONFIG_FILE_SIZE = ConfigFiles.getConfigFileSize();
@@ -78,28 +77,21 @@ public class  NotepadXXV1_2_0 {
     private static SplashScreen splash = null;
     private static List<String> openFiles = loadOpenFilesFromConfig( );
 //private static  String theme = loadThemePreference();
-    public static void main (String args[]) {
+    public static void main(String[] args) {
     	try {
-    		 if (!Platform.isFxApplicationThread()) {
-    	 Platform.startup(() -> {
-             Platform.setImplicitExit(false);  
-            
-           });
-    		 }
-    	}catch(Exception e) {
-    	//	System.setProperty("javafx.platform", "Desktop");
-    	}
-    	
+    		JavaFXUtils.initializeJavaFX();
         int maxFiles = 100;
         File appDir = new File(CONFIG_FILE_OPEN_FILES);
         if (openFiles.size() > maxFiles || !appDir.exists()) {
-        	      MainMethod2(args);
-        }else {
-       	MainMethod1(args);
+            MainMethod2(args);
+        } else {
+            MainMethod1(args);
         }
-       
-    	//MainMethod1(args);
+    	}catch(Error e) {
+    		System.out.println("It is crashed "+ e);
+    	}
     }
+
     
 	private static List<String> loadOpenFilesFromConfig() {
 	    List<String> openFilesList = new ArrayList<>();
@@ -151,7 +143,7 @@ public class  NotepadXXV1_2_0 {
 
 	            frame.setLayout(new BorderLayout());
 	          //  frame.setIconImage(new ImageIcon(mainInstance.getClass().getResource("/icons/LogoX.png")).getImage());
-	            ImageIcon icon = new ImageIcon(new NotepadXXV1_2_0().getClass().getResource("/icons/LogoX.png"));
+	            ImageIcon icon = new ImageIcon(new NotepadXXV1_2_1().getClass().getResource("/icons/LogoX.png"));
 	            Image scaledImage = icon.getImage().getScaledInstance(32, 32, Image.SCALE_SMOOTH);
 	            frame.setIconImage(scaledImage);
 	            

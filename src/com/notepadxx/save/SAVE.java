@@ -11,8 +11,6 @@ import com.notepadxx.filewatcher.FileWatcher;
 import com.notepadxx.notepadxx.Texteditor;
 import com.notepadxx.open.LazyLoading;
 
-import javafx.application.Platform;
-
 public class SAVE {
 
   private Texteditor editor;
@@ -61,10 +59,12 @@ public class SAVE {
 	
 	private boolean isFileLoading() {
         if (currentFile == null) return false;
+        
         if (LazyLoading.getLoading()) {
             JOptionPane.showMessageDialog(editor, currentFile.getName() + " is still loading, please wait!",
                                           "Warning", JOptionPane.WARNING_MESSAGE);
             return true;
+            
         }else if(write.getSaving()) {
         	 JOptionPane.showMessageDialog(editor, currentFile.getName() + " is still Saving, please wait!",
                      "Warning", JOptionPane.WARNING_MESSAGE);
@@ -72,25 +72,6 @@ return true;
         }
         return false;
     }
-	
-	
-	protected static boolean isJavaFXAvailable() {
-	    try {
-	        // Check if JavaFX FileChooser class exists
-	        //Class.forName("javafx.stage.FileChooser");
-	    	  // Shut down JavaFX if already initialized (useful for resetting state)
-	        if (Platform.isFxApplicationThread()) {
-	            Platform.exit();
-	        }
-	        new javafx.embed.swing.JFXPanel(); // Forces JavaFX to initialize
-
-	        return true; // JavaFX is available and fully functional
-	    } catch ( RuntimeException |Error e) {
-	        return false; // JavaFX is not available or failed to initialize
-	    } catch (Throwable e) {
-	        return false; // Catch other unexpected errors
-	    }
-	}
 
 	
 } 

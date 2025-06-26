@@ -13,7 +13,7 @@ import javax.swing.JMenuItem;
 import javax.swing.SwingUtilities;
 
 import com.notepadxx.notepadxx.ConfigFiles;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 public class CodeAnalysisMenuBar {
@@ -120,7 +120,7 @@ public class CodeAnalysisMenuBar {
     
     public static void updateMenuCodeAnalysisActiveTab(JMenu langMenuBar) {
         SwingUtilities.invokeLater(() -> {
-            int selectedIndex = NotepadXXV1_2_0.getTabbedPane().getSelectedIndex();
+            int selectedIndex = NotepadXXV1_2_1.getTabbedPane().getSelectedIndex();
             if (selectedIndex == -1) {
            //     System.out.println("No tab selected. Resetting language."); // Debug print
                 resetCode();
@@ -224,7 +224,7 @@ public class CodeAnalysisMenuBar {
     }
 
     private static void setSyntaxCheck(String ext,  JMenuItem language) {
-        int selectedIndex = NotepadXXV1_2_0.getTabbedPane().getSelectedIndex();
+        int selectedIndex = NotepadXXV1_2_1.getTabbedPane().getSelectedIndex();
         if (selectedIndex == -1) return; // No open tab
 
 //       String tabName = texteditor().getTabTitle().replace(" *", "");
@@ -367,7 +367,7 @@ public class CodeAnalysisMenuBar {
     
     private static Texteditor texteditor() {
     	
-        return NotepadXXV1_2_0.texteditor();
+        return NotepadXXV1_2_1.texteditor();
     }
 
 

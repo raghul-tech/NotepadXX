@@ -34,14 +34,14 @@ import javax.swing.SwingWorker;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 
 
 //@SuppressWarnings("static-access")
 public class LinuxUtils {
 
-	 private static final String UPDATE_URL = "https://raw.githubusercontent.com/raghul-tech/NotepadXX-Releases/refs/heads/main/updates/updateForLinuxV1.2.0.json";
-	    private static String currentVersion = "1.2.0";
+	 private static final String UPDATE_URL = "https://raw.githubusercontent.com/raghul-tech/NotepadXX-Releases/refs/heads/main/updates/updateForLinuxV1.2.1.json";
+	    private static String currentVersion = "1.2.1";
 	    private static long lastUpdateCheck = 0;
 	    private static ScheduledExecutorService executorService;
 	    private static boolean isCheckingForUpdate = false;
@@ -90,7 +90,7 @@ public class LinuxUtils {
 
 	            if (!opened) {
 	                JOptionPane.showMessageDialog(
-	                		NotepadXXV1_2_0.getFrame(),
+	                		NotepadXXV1_2_1.getFrame(),
 	                    "Could not open directory with any known file manager.",
 	                    "Error",
 	                    JOptionPane.ERROR_MESSAGE
@@ -98,7 +98,7 @@ public class LinuxUtils {
 	            }
 	        } else {
 	            JOptionPane.showMessageDialog(
-	            		NotepadXXV1_2_0.getFrame(),
+	            		NotepadXXV1_2_1.getFrame(),
 	                "Invalid directory: " + directory,
 	                "Error",
 	                JOptionPane.ERROR_MESSAGE
@@ -106,7 +106,7 @@ public class LinuxUtils {
 	        }
 	    } catch (Exception e) {
 	        JOptionPane.showMessageDialog(
-	        		NotepadXXV1_2_0.getFrame(),
+	        		NotepadXXV1_2_1.getFrame(),
 	            "Unexpected error: " + e.getMessage(),
 	            "Error",
 	            JOptionPane.ERROR_MESSAGE
@@ -156,7 +156,7 @@ public class LinuxUtils {
 
 	            if (!terminalOpened) {
 	                JOptionPane.showMessageDialog(
-	                    NotepadXXV1_2_0.getFrame(),
+	                    NotepadXXV1_2_1.getFrame(),
 	                    "Could not open a terminal with any known terminal emulator.",
 	                    "Error",
 	                    JOptionPane.ERROR_MESSAGE
@@ -164,7 +164,7 @@ public class LinuxUtils {
 	            }
 	        } else {
 	            JOptionPane.showMessageDialog(
-	                NotepadXXV1_2_0.getFrame(),
+	                NotepadXXV1_2_1.getFrame(),
 	                "Invalid directory: " + directory,
 	                "Error",
 	                JOptionPane.ERROR_MESSAGE
@@ -172,7 +172,7 @@ public class LinuxUtils {
 	        }
 	    } catch (Exception e) {
 	        JOptionPane.showMessageDialog(
-	        		 NotepadXXV1_2_0.getFrame(),
+	        		 NotepadXXV1_2_1.getFrame(),
 	            "Unexpected error: " + e.getMessage(),
 	            "Error",
 	            JOptionPane.ERROR_MESSAGE
@@ -187,7 +187,7 @@ public class LinuxUtils {
 	        // Prompt user for the password using a dialog
 	        JPasswordField passwordField = new JPasswordField();
 	        int option = JOptionPane.showConfirmDialog(
-	            NotepadXXV1_2_0.getFrame(),
+	            NotepadXXV1_2_1.getFrame(),
 	            passwordField,
 	            "Enter Root Password",
 	            JOptionPane.OK_CANCEL_OPTION,
@@ -201,7 +201,7 @@ public class LinuxUtils {
             passwordField = null;
             if (passwordChars.length == 0) {
                 JOptionPane.showMessageDialog(
-                    NotepadXXV1_2_0.getFrame(),
+                    NotepadXXV1_2_1.getFrame(),
                     "Password cannot be empty!",
                     "Error",
                     JOptionPane.ERROR_MESSAGE
@@ -213,7 +213,7 @@ public class LinuxUtils {
 	        
 	        if (password.isEmpty()) {
 	            JOptionPane.showMessageDialog(
-	            		 NotepadXXV1_2_0.getFrame(),
+	            		 NotepadXXV1_2_1.getFrame(),
 	                "Password cannot be empty!",
 	                "Error",
 	                JOptionPane.ERROR_MESSAGE
@@ -263,7 +263,7 @@ public class LinuxUtils {
 
 	            if (!terminalOpened) {
 	                JOptionPane.showMessageDialog(
-	                		 NotepadXXV1_2_0.getFrame(),
+	                		 NotepadXXV1_2_1.getFrame(),
 	                    "Could not open a root terminal with any known terminal emulator.",
 	                    "Error",
 	                    JOptionPane.ERROR_MESSAGE
@@ -271,7 +271,7 @@ public class LinuxUtils {
 	            }
 	        } else {
 	            JOptionPane.showMessageDialog(
-	            		 NotepadXXV1_2_0.getFrame(),
+	            		 NotepadXXV1_2_1.getFrame(),
 	                "Invalid directory: " + directory,
 	                "Error",
 	                JOptionPane.ERROR_MESSAGE
@@ -279,7 +279,7 @@ public class LinuxUtils {
 	        }
 	    } catch (Exception e) {
 	        JOptionPane.showMessageDialog(
-	        		 NotepadXXV1_2_0.getFrame(),
+	        		 NotepadXXV1_2_1.getFrame(),
 	            "Unexpected error: " + e.getMessage(),
 	            "Error",
 	            JOptionPane.ERROR_MESSAGE
@@ -300,7 +300,7 @@ public class LinuxUtils {
 
 	        if (!directory.exists() || !directory.isDirectory()) {
 	            JOptionPane.showMessageDialog(
-	                NotepadXXV1_2_0.getFrame(),
+	                NotepadXXV1_2_1.getFrame(),
 	                "Invalid directory: " + directory,
 	                "Error",
 	                JOptionPane.ERROR_MESSAGE
@@ -344,7 +344,7 @@ public class LinuxUtils {
 
 	    } catch (Exception e) {
 	        JOptionPane.showMessageDialog(
-	            NotepadXXV1_2_0.getFrame(),
+	            NotepadXXV1_2_1.getFrame(),
 	            "Unexpected error: " + e.getMessage(),
 	            "Error",
 	            JOptionPane.ERROR_MESSAGE
@@ -386,11 +386,11 @@ public class LinuxUtils {
    	            }
 
    	            if (!browserOpened) {
-   	                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open browser. No supported browsers found.");
+   	                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open browser. No supported browsers found.");
    	            }
    	        } catch (Exception ex) {
    	            // In case of other errors, show the message
-   	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open the browser. " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+   	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open the browser. " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
    	        }
    	    }
    	}
@@ -427,11 +427,11 @@ public class LinuxUtils {
    	            }
 
    	            if (!browserOpened) {
-   	                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open browser. No supported browsers found.");
+   	                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open browser. No supported browsers found.");
    	            }
    	        } catch (Exception ex) {
    	            // In case of other errors, show the message
-   	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open the browser. " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+   	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open the browser. " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
    	        }
    	    }
    	}
@@ -467,11 +467,11 @@ public class LinuxUtils {
    	            }
 
    	            if (!browserOpened) {
-   	                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open browser. No supported browsers found.");
+   	                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open browser. No supported browsers found.");
    	            }
    	        } catch (Exception ex) {
    	            // In case of other errors, show the message
-   	            JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error: Unable to open the browser. " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+   	            JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error: Unable to open the browser. " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
    	        }
    	    }
    	}
@@ -561,7 +561,7 @@ public class LinuxUtils {
             }*/
                 if (!browserFound) {
                	    JOptionPane.showMessageDialog(
-               	        NotepadXXV1_2_0.getFrame(),
+               	        NotepadXXV1_2_1.getFrame(),
                	        fallbackMessage,
                	        "Info",
                	        JOptionPane.INFORMATION_MESSAGE
@@ -575,7 +575,7 @@ public class LinuxUtils {
                	            Desktop.getDesktop().browse(fileUrl.toURI());
                	        } catch (Exception e) {
                	            JOptionPane.showMessageDialog(
-               	            	 NotepadXXV1_2_0.getFrame(),
+               	            	 NotepadXXV1_2_1.getFrame(),
                	                "Failed to open file in browser: " + e.getMessage(),
                	                "Error",
                	                JOptionPane.ERROR_MESSAGE
@@ -583,7 +583,7 @@ public class LinuxUtils {
                	        }
                	    } else {
                	        JOptionPane.showMessageDialog(
-               	        	 NotepadXXV1_2_0.getFrame(),
+               	        	 NotepadXXV1_2_1.getFrame(),
                	            "File not found or unavailable.",
                	            "Error",
                	            JOptionPane.ERROR_MESSAGE
@@ -598,7 +598,7 @@ public class LinuxUtils {
                 new ProcessBuilder(command).start();
             } else {
                 JOptionPane.showMessageDialog(
-                		 NotepadXXV1_2_0.getFrame(),
+                		 NotepadXXV1_2_1.getFrame(),
                     "Failed to determine a valid browser command.",
                     "Error",
                     JOptionPane.ERROR_MESSAGE
@@ -606,7 +606,7 @@ public class LinuxUtils {
             }
         } catch (IOException | UnsupportedOperationException e) {
             JOptionPane.showMessageDialog(
-            		 NotepadXXV1_2_0.getFrame(),
+            		 NotepadXXV1_2_1.getFrame(),
                 "Error opening the file: " + e.getMessage(),
                 "Error",
                 JOptionPane.ERROR_MESSAGE
@@ -675,7 +675,7 @@ public class LinuxUtils {
                   
                     } else if (manualCheck) {
                         // Show "You are using the latest version" ONLY if this is a manual check
-                        JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "You are using the latest version.", "Update Check", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "You are using the latest version.", "Update Check", JOptionPane.INFORMATION_MESSAGE);
                     }
                 }
             }else {
@@ -685,7 +685,7 @@ public class LinuxUtils {
            // e.printStackTrace();
             if (manualCheck) {
                 // Show an error dialog ONLY if this is a manual check
-                JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error checking for updates.", "Update Check Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error checking for updates.", "Update Check Error", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
@@ -701,7 +701,7 @@ public class LinuxUtils {
 	    String message = "A new version (" + updateInfo.latest_version + ") is available." + changelogMessage +
 	                     "<br/>Do you want to download it now?";
 
-	    int response = JOptionPane.showConfirmDialog(NotepadXXV1_2_0.getFrame(),
+	    int response = JOptionPane.showConfirmDialog(NotepadXXV1_2_1.getFrame(),
 	            "<html>" + message + "</html>", "Update Available",
 	            JOptionPane.YES_NO_OPTION);
 
@@ -726,7 +726,7 @@ public class LinuxUtils {
 
          // Check if the response code is HTTP_OK (200)
          if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-             JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Failed to connect to the server. Response code: " + connection.getResponseCode(), "Connection Error", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Failed to connect to the server. Response code: " + connection.getResponseCode(), "Connection Error", JOptionPane.ERROR_MESSAGE);
              return;
          }
 
@@ -737,7 +737,7 @@ public class LinuxUtils {
          if (!downloadDir.exists()) {
              if (!downloadDir.mkdirs()) {
                  // If mkdirs fails, show the error and offer an alternative location
-                 JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Failed to create 'Downloads' folder. Please ensure the folder exists or provide an alternative location.", "Folder Creation Error", JOptionPane.ERROR_MESSAGE);
+                 JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Failed to create 'Downloads' folder. Please ensure the folder exists or provide an alternative location.", "Folder Creation Error", JOptionPane.ERROR_MESSAGE);
                  
                  // Provide an option for the user to choose a different folder
                  JFileChooser folderChooser = new JFileChooser();
@@ -758,7 +758,7 @@ public class LinuxUtils {
          // Modern GUI for the download process
          showModernInstallerGUI(newFile, url, connection);
      } catch (Exception e) {
-         JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error downloading the update: " + e.getMessage(), "Download Error", JOptionPane.ERROR_MESSAGE);
+         JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error downloading the update: " + e.getMessage(), "Download Error", JOptionPane.ERROR_MESSAGE);
      } finally {
          if (connection != null) {
              connection.disconnect(); // Ensure connection is closed
@@ -771,7 +771,7 @@ public class LinuxUtils {
      installerFrame.setSize(500, 150);
      installerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      installerFrame.setLocationRelativeTo(null);
-     installerFrame.setIconImage(new ImageIcon(new NotepadXXV1_2_0().getClass().getResource("/icons/NotepadXXLogo.png")).getImage());
+     installerFrame.setIconImage(new ImageIcon(new NotepadXXV1_2_1().getClass().getResource("/icons/NotepadXXLogo.png")).getImage());
 
      JLabel statusLabel = new JLabel("Downloading NotepadXX New Version...");
      JProgressBar progressBar = new JProgressBar(0, 100);
@@ -853,15 +853,15 @@ public class LinuxUtils {
              if (installScript.exists()) {
                  ProcessBuilder pb = new ProcessBuilder("bash", installScript.getAbsolutePath());
                  pb.start();
-                 JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Installation started!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                 JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Installation started!", "Success", JOptionPane.INFORMATION_MESSAGE);
              } else {
-                 JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "install.sh not found in the extracted folder.", "Error", JOptionPane.ERROR_MESSAGE);
+                 JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "install.sh not found in the extracted folder.", "Error", JOptionPane.ERROR_MESSAGE);
              }
          }else {
-        	 JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "File Downloaded At "+programFile.getAbsolutePath() , "Support", JOptionPane.INFORMATION_MESSAGE);
+        	 JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "File Downloaded At "+programFile.getAbsolutePath() , "Support", JOptionPane.INFORMATION_MESSAGE);
          }
      } catch (IOException e) {
-         JOptionPane.showMessageDialog(NotepadXXV1_2_0.getFrame(), "Error running the new version of the application: " + e.getMessage(), "Execution Error", JOptionPane.ERROR_MESSAGE);
+         JOptionPane.showMessageDialog(NotepadXXV1_2_1.getFrame(), "Error running the new version of the application: " + e.getMessage(), "Execution Error", JOptionPane.ERROR_MESSAGE);
      }
  }
 

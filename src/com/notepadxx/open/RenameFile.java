@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 import com.notepadxx.notepadxx.Texteditor;
+import com.notepadxx.utils.JavaFXUtils;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -33,7 +34,7 @@ public class RenameFile {
 	        return;
 	    }
 
-	    if (OPEN.isJavaFXAvailable()) {
+	    if (JavaFXUtils.isJavaFXAvailable()) {
 	        try {
 	            if (!Platform.isFxApplicationThread()) {
 	                new JFXPanel(); // Initializes JavaFX

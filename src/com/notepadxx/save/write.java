@@ -34,7 +34,7 @@ import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rtextarea.RTextScrollPane;
 
 import com.formdev.flatlaf.FlatLaf;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 public class write {
@@ -252,8 +252,8 @@ public class write {
 	    // Initialize the progress frame only once
 	    if (saveFrame == null && !(progress >= 100)) {
 	   //     frameshown = true;
-	        Point mainFrameLocation = NotepadXXV1_2_0.getFrameLoc();
-	        Dimension mainFrameSize = NotepadXXV1_2_0.getFrameSize();
+	        Point mainFrameLocation = NotepadXXV1_2_1.getFrameLoc();
+	        Dimension mainFrameSize = NotepadXXV1_2_1.getFrameSize();
 	        
 	        saveFrame = new JFrame("Saving...");
 	        saveFrame.setSize(400, 120);

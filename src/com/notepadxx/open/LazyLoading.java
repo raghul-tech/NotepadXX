@@ -37,7 +37,7 @@ import javax.swing.UIManager;
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 
 import com.formdev.flatlaf.FlatLaf;
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 
 
@@ -307,8 +307,8 @@ public class LazyLoading {
 
         // Initialize the loading frame
         if (loadFrame == null) {
-            Point mainFrameLocation = NotepadXXV1_2_0.getFrameLoc();
-            Dimension mainFrameSize = NotepadXXV1_2_0.getFrameSize();
+            Point mainFrameLocation = NotepadXXV1_2_1.getFrameLoc();
+            Dimension mainFrameSize = NotepadXXV1_2_1.getFrameSize();
             
             loadFrame = new JFrame("Opening File...");
             loadFrame.setSize(400, 120);
@@ -429,9 +429,9 @@ public class LazyLoading {
                     	loadFrame.dispose();
                     	loadFrame = null;
                     	progressBar = null;
-                    	NotepadXXV1_2_0.checkAndOpenDefaultTab();
-                     NotepadXXV1_2_0.getTabbedPane().remove(editor);
-                    	NotepadXXV1_2_0.checkAndOpenDefaultTab();
+                    	NotepadXXV1_2_1.checkAndOpenDefaultTab();
+                     NotepadXXV1_2_1.getTabbedPane().remove(editor);
+                    	NotepadXXV1_2_1.checkAndOpenDefaultTab();
                     	  });
                     	// editor.closeTab();
                       //   System.gc();

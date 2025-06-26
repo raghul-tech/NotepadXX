@@ -79,8 +79,6 @@ import com.notepadxx.syntaxchecker.SyntaxChecker;
 import com.notepadxx.utils.LinuxUtils;
 import com.notepadxx.utils.WindowsUtils;
 
-import javafx.application.Platform;
-
 
 @SuppressWarnings("serial")
 public class Texteditor extends JPanel   {
@@ -135,8 +133,8 @@ public Texteditor() {
      textArea.setClearWhitespaceLinesEnabled(true);
 //     textArea.setEOLMarkersVisible(false);
      textArea.setDragEnabled(true);
-     if(NotepadXXV1_2_0.getFrame().isShowing()) {
-    	  NotepadXXV1_2_0.updateLineWrap(this);
+     if(NotepadXXV1_2_1.getFrame().isShowing()) {
+    	  NotepadXXV1_2_1.updateLineWrap(this);
      }
   
 	// });
@@ -207,26 +205,26 @@ public Texteditor() {
 
 
 public void openMarkdownPreviewWindow(Texteditor editor) {
-	// MarkdownPreview.showMarkdownPreview(tabbedPane, editor);
-
+	
 	 if(markdown1 == null) {
 		 markdown1 = new MarkdownPreviewWindow(editor);
 	 }else {
 		 markdown1.reopen();
 	 }
-	// markdown.openMarkdownPreviewTabFX(editor);
 	 
 	 
  }
 public void openMarkdownPreviewTab(Texteditor editor) {
-	// MarkdownPreview.showMarkdownPreview(tabbedPane, editor);
 
 	 if(markdown2 == null) {
-		 markdown2 = new MarkdownPreviewTab(NotepadXXV1_2_0.getTabbedPane());
+		 markdown2 = new MarkdownPreviewTab(NotepadXXV1_2_1.getTabbedPane());
 	 }
 	 markdown2.openMarkdownPreviewTabFX(editor);
 	 
  }
+
+
+
 
 
 public void pauseEditor(Texteditor editor) {
@@ -419,7 +417,7 @@ private class FileProcessorWorker extends SwingWorker<Void, File> {
     protected void process(List<File> chunks) {
         for (File file : chunks) {
             if (currentFile != null || isModified || files.size() > 1) {
-                NotepadXXV1_2_0.openNewTab(file);
+                NotepadXXV1_2_1.openNewTab(file);
             } else {
                 fileSizeToOpen(file);
             }
@@ -490,7 +488,7 @@ private void handleDroppedFiles(List<File> files) {
         protected void process(List<File> chunks) {
             for (File file : chunks) {
                 if (currentFile != null || isModified || files.size() > 1) {
-                    NotepadXXV1_2_0.openNewTab(file);
+                    NotepadXXV1_2_1.openNewTab(file);
                 } else {
                     fileSizeToOpen(file);
                 }
@@ -673,7 +671,7 @@ public  void fileSizeToOpen(File file) {
 }
 
 public void newFile() {
-	NotepadXXV1_2_0.openNewTab(null);
+	NotepadXXV1_2_1.openNewTab(null);
 }
 public void RenameFile() {
 	OPEN open = new OPEN(this,currentFile,tabTitle,isModified,textArea);
@@ -836,34 +834,6 @@ private void ChangeCodeAnalysisMenu(String tabname ,String ext) {
 	LanguageMenuBar.clearConfigLanguageFile();
 	CodeAnalysisMenuBar.clearConfigCodeAnalysisFile();
 }*/
-
-
-/**
- * this is to find if javaFX available in the user system
- * this ensure that the app work in all platform
- * @return 
- */
-
-public  boolean isJavaFXAvailable() {
-    try {
-        // Check if JavaFX FileChooser class exists
-        //Class.forName("javafx.stage.FileChooser");
-    	  // Shut down JavaFX if already initialized (useful for resetting state)
-        if (Platform.isFxApplicationThread()) {
-            Platform.exit();
-        }
-        new javafx.embed.swing.JFXPanel(); // Forces JavaFX to initialize
-
-        return true; // JavaFX is available and fully functional
-    } catch ( RuntimeException |Error e) {
-        return false; // JavaFX is not available or failed to initialize
-    } catch (Throwable e) {
-        return false; // Catch other unexpected errors
-    }
-}
-
-
-
 
 /**
  * shortcut keys method
@@ -1632,7 +1602,7 @@ public synchronized void updateTitle(String title) {
 		   }
 
 		   public synchronized void updateTabTitle() {
-			    int tabIndex = NotepadXXV1_2_0.getTabbedPane().indexOfComponent(this);
+			    int tabIndex = NotepadXXV1_2_1.getTabbedPane().indexOfComponent(this);
 			    if (tabIndex < 0) return;
 
 			    // Determine tab title and icon
@@ -1641,10 +1611,10 @@ public synchronized void updateTitle(String title) {
 			    
 			    Icon tabIcon = GetImage.getImage(currentFile);
 			    // Get or create tab panel
-			    JPanel tabPanel = (JPanel) NotepadXXV1_2_0.getTabbedPane().getTabComponentAt(tabIndex);
+			    JPanel tabPanel = (JPanel) NotepadXXV1_2_1.getTabbedPane().getTabComponentAt(tabIndex);
 			    if (tabPanel == null) {
 			        tabPanel = createTabPanel();
-			        NotepadXXV1_2_0.getTabbedPane().setTabComponentAt(tabIndex, tabPanel);
+			        NotepadXXV1_2_1.getTabbedPane().setTabComponentAt(tabIndex, tabPanel);
 			    }
 
 			    // Update title components
@@ -1706,8 +1676,8 @@ public synchronized void updateTitle(String title) {
 			    closeButtonHolder[0].addActionListener(e -> CLOSE.closeTab(this));
 
 			    // Update tab properties
-			    NotepadXXV1_2_0.getTabbedPane().setTitleAt(tabIndex, title);
-			    NotepadXXV1_2_0.getTabbedPane().setIconAt(tabIndex, tabIcon);
+			    NotepadXXV1_2_1.getTabbedPane().setTitleAt(tabIndex, title);
+			    NotepadXXV1_2_1.getTabbedPane().setIconAt(tabIndex, tabIcon);
 			//    notepad.getTabbedPane().setToolTipTextAt(tabIndex, tooltip);
 
 			    WindowMenu.updateWindowMenu();

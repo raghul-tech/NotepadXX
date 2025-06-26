@@ -22,7 +22,7 @@ import javax.swing.SwingWorker;
 
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 
 public class ReloadFile {
 
@@ -326,8 +326,8 @@ private void handleMemoryError(File file,int scrollPos) {
      memoryErrorShown = true; // Set flag to true
     SwingUtilities.invokeLater(() -> {
      //   disableMemoryIntensiveFeatures();
-    NotepadXXV1_2_0.getTabbedPane().remove(NotepadXXV1_2_0.texteditor());
-    	NotepadXXV1_2_0.checkAndOpenDefaultTab();
+    NotepadXXV1_2_1.getTabbedPane().remove(NotepadXXV1_2_1.texteditor());
+    	NotepadXXV1_2_1.checkAndOpenDefaultTab();
      //  JOptionPane.showMessageDialog(null, "File too large to load completely. Partial content loaded.", "Error", JOptionPane.ERROR_MESSAGE);
     //   System.out.println("MEMORY OUT ERROR OCCURED");
      //  loadVeryLargeFile(file,scrollPos);

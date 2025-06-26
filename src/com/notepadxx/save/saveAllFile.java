@@ -9,9 +9,10 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import com.notepadxx.notepadxx.NotepadXXV1_2_0;
+import com.notepadxx.notepadxx.NotepadXXV1_2_1;
 import com.notepadxx.notepadxx.Texteditor;
 import com.notepadxx.open.RenameFile;
+import com.notepadxx.utils.JavaFXUtils;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -26,10 +27,10 @@ public class saveAllFile {
 		
 //	    int tabCount = notepad.tabbedPane.getTabCount();
 	    new Thread(() ->{
-	    	int tabCount = NotepadXXV1_2_0 .getTabbedPane().getTabCount();
+	    	int tabCount = NotepadXXV1_2_1 .getTabbedPane().getTabCount();
 	   // 	int tabCount = SwingUtilities.invokeLater(() -> notepad.tabbedPane.getTabCount());
 	    // Check if JavaFX is available
-	    boolean isJavaFXAvailable = SAVE.isJavaFXAvailable();
+	    boolean isJavaFXAvailable = JavaFXUtils.isJavaFXAvailable();
 
 	    // Initialize JavaFX runtime if available
 	    if (isJavaFXAvailable) {
@@ -39,7 +40,7 @@ public class saveAllFile {
 	    }  
 
 	    for (int i = 0; i < tabCount; i++) { 
-	        Component component = NotepadXXV1_2_0 .getTabbedPane().getComponentAt(i);
+	        Component component = NotepadXXV1_2_1 .getTabbedPane().getComponentAt(i);
 	        if (component instanceof Texteditor editor) {
 	            File file = editor.getCurrentFile();
 	          
@@ -100,7 +101,7 @@ public class saveAllFile {
 	        
 	        fileChooser.setInitialFileName(defaultFileName);
 
-	        Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+	        Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 	         // Set the initial directory
 	            if (editor.getCurrentFile() != null &&editor.getCurrentFile().getParentFile() != null) {
 	                // Priority 1: Parent directory of the current file
@@ -156,7 +157,7 @@ public class saveAllFile {
 	    fileChooser.setDialogTitle("Save As");
 	    fileChooser.setSelectedFile(new File(defaultFileName));
 
-	    Texteditor previousEditor = NotepadXXV1_2_0.getPreviousEditor();
+	    Texteditor previousEditor = NotepadXXV1_2_1.getPreviousEditor();
 	     // Set the initial directory
 	     if (editor.getCurrentFile() != null && editor.getCurrentFile().getParentFile() != null) {
 	         fileChooser.setCurrentDirectory(editor.getCurrentFile().getParentFile());
